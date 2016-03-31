@@ -65,6 +65,8 @@ public class Defaults {
      */
     public static final String EBI_REFERENCE_SEVICE_URL_MASK;
 
+    public static final boolean SRA_LIBRARIES_DOWNLOAD;
+
 
     static {
         CREATE_INDEX = getBooleanProperty("create_index", false);
@@ -83,6 +85,7 @@ public class Defaults {
         USE_CRAM_REF_DOWNLOAD = getBooleanProperty("use_cram_ref_download", false);
         EBI_REFERENCE_SEVICE_URL_MASK = "http://www.ebi.ac.uk/ena/cram/md5/%s";
         CUSTOM_READER_FACTORY = getStringProperty("custom_reader", "");
+        SRA_LIBRARIES_DOWNLOAD = getBooleanProperty("sra_libraries_download", false);
     }
 
     /** Gets a string system property, prefixed with "samjdk." using the default if the property does not exist. */
