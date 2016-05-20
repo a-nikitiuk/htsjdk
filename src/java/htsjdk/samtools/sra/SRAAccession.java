@@ -73,6 +73,15 @@ public class SRAAccession implements Serializable {
     }
 
     /**
+     * @deprecated
+     * @return true if SRA successfully loaded native libraries and fully initialized,
+     * false otherwise
+     */
+    public static boolean isSupported() {
+        return checkIfInitialized() == null;
+    }
+
+    /**
      * Tries to initialize SRA. Initialization error is saved during first call,
      * all subsequent calls will return the same saved error or null.
      *
